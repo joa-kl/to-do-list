@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import css from "./Task.module.css";
-import { getTask } from "redux/selectors";
+// import { getTask } from "redux/selectors";
 import { deleteTask, toggleCompleted } from "redux/actions";
 
 export const Task = ({ task }) => {

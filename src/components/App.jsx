@@ -3,7 +3,7 @@ import { StatusFilter } from "./StatusFilter";
 import { TaskList } from "./TaskList/TaskList";
 import css from "./App.module.css";
 import { TaskForm } from "./TaskForm/TaskForm";
-import { TaskCounter } from "./TaskCounter/TaskCounter";
+// import { TaskCounter } from "./TaskCounter/TaskCounter";
 
 export const App = () => {
 

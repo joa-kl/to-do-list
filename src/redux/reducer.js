@@ -1,6 +1,6 @@
 // import { combineReducers } from "@reduxjs/toolkit";
 
-import { combineReducers } from "redux";
+// import { combineReducers } from "redux";
 import { statusFilters } from "./constans";
 import { addTask, deleteTask, setStatusFilter, toggleCompleted } from "./actions";
 
