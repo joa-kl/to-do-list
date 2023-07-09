@@ -23,3 +23,29 @@ export const fetchTasks = createAsyncThunk("tasks/fetchAll", async (arg, thunkAP
         return thunkAPI.rejectWithValue(e.message);
     }
 })
+
+export const addTask = createAsyncThunk(
+    "tasks/addTask",
+    async (text, thunkAPI) => {
+        try {
+            const resposne = await axios.post("/tasks", { text })
+            return resposne.data;
+        } catch (e) {
+            return thunkAPI.rejectWithValue(e.message);
+        }  
+    }
+)
+
+export const toggleCompleted = createAsyncThunk(
+    "tasks/toggleCompleted",
+    async (task, thunkAPI) => {
+        try {
+            const resposne = await axios.put(`/tasks/${task.id}`, { 
+                completed: !task.completed
+             })
+            return resposne.data;
+        } catch (e) {
+            return thunkAPI.rejectWithValue(e.message);
+        }  
+    }
+)
